@@ -119,17 +119,9 @@ function App() {
           <OrbitControls 
             enableZoom={false}
             enablePan={false}
+            enableRotate={false}
             minPolarAngle={Math.PI / 4}
             maxPolarAngle={Math.PI / 2}
-            dampingFactor={0.2}
-            enableDamping={true}
-            rotateSpeed={isMobile ? 0.6 : 1}
-            touches={{
-              ONE: THREE.TOUCH.ROTATE
-            }}
-            mouseButtons={{
-              LEFT: THREE.MOUSE.ROTATE
-            }}
           />
         </Suspense>
       </Canvas>

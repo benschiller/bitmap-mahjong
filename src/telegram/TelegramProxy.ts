@@ -15,6 +15,14 @@ export class TelegramProxy {
         console.error('Failed to initialize Telegram game:', e);
       }
     }
+
+    // Handle game sharing
+    if (window.TelegramGameProxy) {
+      window.TelegramGameProxy.shareScore = () => {
+        // Called when user wants to share their score
+        console.log('Score shared');
+      };
+    }
   }
 
   static setScore(score: number) {
