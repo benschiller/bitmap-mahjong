@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "start": "vite preview --host --port $PORT"
+    "start": "vite preview --host --port $PORT --no-open"
   },
   "dependencies": {
     "@react-spring/three": "^9.7.3",
