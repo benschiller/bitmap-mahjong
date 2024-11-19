@@ -6,12 +6,24 @@ export class TelegramProxy {
       console.log('Game running in standalone mode');
       return;
     }
-    console.log('Telegram Game Proxy initialized');
+
+    // Initialize Telegram game
+    if (window.TelegramGameProxy?.initGame) {
+      try {
+        window.TelegramGameProxy.initGame();
+      } catch (e) {
+        console.error('Failed to initialize Telegram game:', e);
+      }
+    }
   }
 
   static setScore(score: number) {
     if (this.isInTelegram && window.TelegramGameProxy?.setScore) {
-      window.TelegramGameProxy.setScore(score);
+      try {
+        window.TelegramGameProxy.setScore(score);
+      } catch (e) {
+        console.error('Failed to set score:', e);
+      }
     }
   }
 } 
