@@ -83,7 +83,7 @@ export function GameState({
   const getButtonText = () => {
     if (isResetting) return "Resetting...";
     switch(buttonState) {
-      case 0: return "Buy Miner with AEON"
+      case 0: return "Buy Miner"
       case 1: return "Add Hash Rate?"
       case 2: return "5x Mining Power"
       default: return ""
